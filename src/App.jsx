@@ -1,24 +1,20 @@
-import ProductCard from "./components/productCard"
-import UserData from "./components/userData"
 
+import { Routes, Route } from 'react-router-dom';
+import HomePage from './pages/home.jsx';
+import AdminPage from './pages/admin.jsx';
+import LoginPage from './pages/login.jsx';
 
-function App() {
-  
-
+export default function App() {
   return (
-    <>
-
-    <UserData/>
     
-    <ProductCard 
-    name="Macbook air" 
-    image="https://picsum.photos/id/0/200/300" 
-    price="1299"
-    />
-    
-    </>
-      
-  )
+    <div clasName="w-full h-screen ">
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/admin/*" element={<AdminPage />} />
+        <Route path="/login" element={<LoginPage />} />
+      </Routes>
+    </div>
+  );
 }
 
-export default App
+
