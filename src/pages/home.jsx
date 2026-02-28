@@ -1,7 +1,7 @@
 export default function HomePage(){
 
     return(
-        <div>
+        <div className="bg-accent">
             home page
         </div>
     );
