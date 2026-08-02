@@ -1,19 +1,23 @@
-import ProductCard from './assets/components/productCard';
-import UserData from './assets/components/userData';        
+import HomePage from "./assets/pages/home"
+import LoginPage from "./assets/pages/login"
+import RegisterPage from "./assets/pages/register"
+import AdminPage from "./assets/pages/admin"
+import { Routes, Route } from "react-router-dom"
+    
 
-function App() {
+export default function App() {
 
   return (
-    <>
-      <h1>My App</h1>
-      <ProductCard 
-      name="Laptop"
-      image="laptop.jpg"
-      price="1000"
-      />
-      <UserData/>
-    </>
+    <div className="w-screen h-screen bg-amber-700" >
+      <Routes>
+        <Route path="/" element={<HomePage/>}></Route>
+        <Route path="/login" element={<LoginPage/>}></Route>
+        <Route path="/register" element={<RegisterPage/>}></Route>
+        <Route path="/admin/*" element={<AdminPage/>}></Route>
+
+      </Routes>
+    </div>  
   )
 }
 
-export default App
+
