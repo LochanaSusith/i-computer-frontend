@@ -8,7 +8,7 @@ import { Routes, Route } from "react-router-dom"
 export default function App() {
 
   return (
-    <div className="w-screen h-screen bg-amber-700" >
+    <div className="w-full h-screen bg-primary text-secondary" >
       <Routes>
         <Route path="/" element={<HomePage/>}></Route>
         <Route path="/login" element={<LoginPage/>}></Route>
