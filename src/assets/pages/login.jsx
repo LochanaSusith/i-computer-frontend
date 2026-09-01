@@ -33,6 +33,7 @@ export default function LoginPage() {
       console.log(res);
       toast.success("Login successful!");
 
+      localStorage.setItem("token",res.data.token);
       if(res.data.role == "admin"){
         navigate("/admin/");
         //window.location.href = "/admin/";

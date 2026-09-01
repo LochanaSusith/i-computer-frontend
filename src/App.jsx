@@ -13,9 +13,10 @@ export default function App() {
 
       <Toaster position="top-center"/>
       <Routes>
-        <Route path="/" element={<HomePage/>}></Route>
-        <Route path="/login" element={<LoginPage/>}></Route>
-        <Route path="/register" element={<RegisterPage/>}></Route>
+        <Route path="/" element={<HomePage/>}/>
+        <Route path="/login" element={<LoginPage/>}/>
+        <Route path="/register" element={<RegisterPage/>}/>
+        <Route path="/admin/*" element={<AdminPage/>}/>
 
       </Routes>
     </div>  
